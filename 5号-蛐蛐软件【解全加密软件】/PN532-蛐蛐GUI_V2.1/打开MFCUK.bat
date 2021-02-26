@@ -1,0 +1,1 @@
+start cmd /k mfcuk.exe -C -R 3 -S 250 - s 250 -v 3

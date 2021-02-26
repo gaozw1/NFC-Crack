@@ -1,0 +1,43 @@
+找回了丢失的文件
+需要填写设备信息
+
+在  libnfc.conf（用记事本打开）
+
+出现以下文字
+
+allow_autoscan = true
+
+
+log_level=2
+
+
+allow_intrusive_scan = true
+
+
+device.name="PN532Reader"
+
+
+device.connstring="pn532_uart:COM8:115200"
+#在这里设置端口和波特率
+
+
+
+
+
+
+1、运行“打开MFCUK破解密钥.bat”破解密钥，连续出现三次及以上相同密码则此密码很可能为真实密码，记录下来。
+
+
+2、右键“打开MFOC读卡.bat”，点击“编辑”，在“mfoc.exe”和“-O”之间加入“-k xxxxxxxxxxxx”（xxxxxxxxxxxx为你记录的密钥）
+例如“start cmd /k mfoc.exe -k 6019A589FCA7 -O key.dump”（注意前后都有空格）
+
+3、运行“打开MFOC读卡.bat”开始破解，运气好30分钟之内就能破解。
+
+
+4、破解完成后，将破解出的密钥加入“打开MFOC读卡.bat”中，参考步骤2。
+
+
+写卡：
+
+1、修改好key.dump后运行“打开nfc-mfclassic写卡.bat”将key.dump写入原卡。
+
